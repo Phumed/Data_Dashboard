@@ -3,8 +3,10 @@ import data from "../data/example_data.json";
 import DataChart from "../components/DataChart";
 import KeywordChart from "../components/KeywordChart";
 import EngagementChart from "../components/EngagementChart";
+import { useRouter } from "next/router";
 
 function dashboard() {
+  const router = useRouter();
   const [chartData, setChartData] = useState([]);
   const [keywordData, setKeywordData] = useState([]);
   const [engagementData, setEngagementData] = useState([]);
@@ -107,8 +109,14 @@ function dashboard() {
 
   return (
     <div className="relative">
-      <div className="sticky top-0 w-screen py-4 px-8 font-semibold border border-b-gray-200">
-        Dashboard
+      <div className="flex justify-between items-center sticky top-0 w-screen py-4 px-8 border border-b-gray-200 bg-white">
+        <div className="font-semibold">Dashboard</div>
+        <div
+          className="flex cursor-pointer justify-center items-center text-lg font-semibold bg-red-600 hover:bg-red-700 text-white py-1 px-3 rounded-lg transition duration-200"
+          onClick={() => router.push("/")}
+        >
+          Sign out
+        </div>
       </div>
       <div className="px-24 py-12">
         {chartData?.length > 0 && <DataChart data={chartData} />}{" "}

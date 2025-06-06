@@ -14,7 +14,7 @@ export default function KeywordChart({ data }) {
       labels: { format: "{value:%Y-%m-%d}" },
     },
     yAxis: {
-      title: { text: "Keyword Count" },
+      title: { text: "Engagement Count" },
 
       allowDecimals: false,
     },
