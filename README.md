@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-# 📊 Keyword Timeline Dashboard
+# Data Dashboard
 
 This project is a data visualization dashboard built with **Next.js** and **Highcharts**, designed to display data frequencies over time based on published date.
 
